@@ -439,6 +439,15 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
+#gift-color-1 {
+  background: linear-gradient(135deg, #ff72c7 25%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
 #gift-color-2 {
   background: linear-gradient(135deg, #ff72c7 25%, #ffd607 50%, #ff0000 100%);
   background-clip: text;
@@ -3429,6 +3438,7 @@ body.passcode-unlocked .passcode-page {
   .passcode-photo-wrapper {
     padding: 12px;
     border-radius: 28px;
+
   }
 
   .passcode-photo-card {
@@ -3473,4 +3483,97 @@ body.passcode-unlocked .passcode-page {
     height: 56px;
     font-size: 20px;
   }
+}
+
+
+/* =========================================================
+   MOBILE HERO ORDER
+   Happy Birthday → Photo → Description → Buttons → Stats
+   Desktop layout remains unchanged
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Make hero items behave as individual grid items */
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    text-align: center;
+  }
+
+  .hero-left {
+    display: contents;
+  }
+
+  /* 1. Birthday Badge */
+  .hero-badge-wrapper {
+    order: 1;
+    margin-bottom: 18px;
+  }
+
+  /* 2. Happy Birthday Roshni */
+  .hero-title {
+    order: 2;
+  }
+
+  /* 3. Today, the world celebrates... */
+  .hero-subtitle {
+    order: 3;
+    margin: 20px auto 24px;
+    max-width: 600px;
+  }
+
+  /* 4. PHOTO / MEMORIES */
+  .hero-right {
+    order: 4;
+    width: 100%;
+    margin: 25px 0 35px;
+  }
+
+  /* 5. Personal Birthday Message */
+  .hero-description {
+    order: 5;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* 6. Buttons */
+  .hero-buttons {
+    order: 6;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  /* 7. Stats */
+  .hero-stats {
+    order: 7;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  /* Keep photo nicely sized on mobile */
+  .photo-wrapper {
+    width: min(82vw, 360px);
+    height: min(82vw, 360px);
+    /* margin: 0 auto; */
+    margin-top: 50px;
+  }
+
+  /* Prevent badge from becoming too wide */
+  .hero-badge {
+    max-width: 90vw;
+  }
+}
+
+
+
+.hero-right {
+  transform: translateY(-80px);
 }

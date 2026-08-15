@@ -404,7 +404,7 @@
     const memories = [
       {
         title: "🎂 Birthday Together",
-        description: "Tum meri coding ki semicolon ho, Jo na ho toh error hi error aata hai. Tum saath ho toh, Har program successful compile ho jaata hai. ❤️",
+        description: "Tum meri coding ki semicolon ho, Jo na ho toh error hi error aata hai. Tum saath ho toh, Har program successful compile ho jaata hai. 😥❤️",
         src: "image/memory1.jpeg"
       },
       {
@@ -439,7 +439,7 @@
       },
       {
         title: "🌃 Under The Lights",
-        description: "A beautiful night, sparkling lights, and a memory worth holding onto. 💫",
+        description: "A beautiful night, sparkling lights, and a memory worth holding onto. 💫<br> <span id=\"gift-color-1\"> Tumhari har photo khoobsurat hai, lekin is photo mein na jaane kya baat hai… meri nazar baar-baar isi par ruk jaati hai.” ❤️‍🩹 kisi din wallpaper na lga lun.</span>",
         src: "image/memory8.jpeg"
       }
     ];
@@ -465,7 +465,7 @@
         };
       }
       if (popupTitle) popupTitle.textContent = m.title;
-      if (popupDesc) popupDesc.textContent = m.description;
+      if (popupDesc) popupDesc.innerHTML = m.description;
 
       modal.style.display = "flex";
       document.body.style.overflow = "hidden";
