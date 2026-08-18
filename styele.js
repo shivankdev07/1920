@@ -38,13 +38,56 @@
     }
   };
 
+  /**
+   * PAGE VIEW SWITCHER SYSTEM
+   */
+  function showPage(targetId) {
+    if (!targetId || targetId === "passcode") {
+      targetId = "home";
+    }
+
+    document.body.classList.add("page-mode");
+
+    const sections = $$("main > section");
+    let targetSection = $(`#${targetId}`);
+
+    if (!targetSection) {
+      targetId = "home";
+      targetSection = $("#home");
+    }
+
+    sections.forEach((sec) => {
+      if (sec.id !== "passcode") {
+        sec.classList.remove("active-page");
+      }
+    });
+
+    if (targetSection) {
+      targetSection.classList.add("active-page");
+    }
+
+    // Highlight nav link
+    const links = $$(".nav-link");
+    links.forEach((link) => {
+      link.classList.remove("active");
+      const href = link.getAttribute("href");
+      if (href === `#${targetId}`) {
+        link.classList.add("active");
+      }
+    });
+
+    // Scroll to top of section
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
   /** ==========================================================================
-   * 1. NAVIGATION & SCROLL SYSTEM
+   * 1. NAVIGATION & PAGE SWITCHING SYSTEM
    * ========================================================================== */
   function initNavigation() {
     const navToggle = $("#navToggle");
     const navLinks = $("#navLinks");
     const links = $$(".nav-link");
+    const logo = $(".nav-logo");
 
     if (navToggle && navLinks) {
       navToggle.addEventListener("click", () => {
@@ -52,57 +95,85 @@
         navToggle.classList.toggle("active");
       });
 
-      // Close mobile menu when a link is clicked
       links.forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
           navLinks.classList.remove("active");
           navToggle.classList.remove("active");
+
+          const href = link.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            const pageId = href.substring(1);
+            showPage(pageId);
+            window.location.hash = pageId;
+          }
         });
       });
     }
 
-    // Scroll Spy: Highlight active nav link on scroll
-    const sections = $$("section[id]");
-    if (sections.length && links.length) {
-      window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY + 120;
+    if (logo) {
+      logo.addEventListener("click", (e) => {
+        e.preventDefault();
+        showPage("home");
+        window.location.hash = "home";
+      });
+    }
 
-        sections.forEach((section) => {
-          const sectionHeight = section.offsetHeight;
-          const sectionTop = section.offsetTop;
-          const sectionId = section.getAttribute("id");
+    // Page nav buttons handler
+    $$(".page-nav-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        if (target) {
+          showPage(target);
+          window.location.hash = target;
+        }
+      });
+    });
 
-          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            links.forEach((link) => {
-              link.classList.remove("active");
-              if (link.getAttribute("href") === `#${sectionId}`) {
-                link.classList.add("active");
-              }
-            });
-          }
-        });
-      }, { passive: true });
+    // Hash change handler
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        showPage(hash);
+      }
+    });
+
+    // Initial page view determination
+    const initialHash = window.location.hash.replace("#", "");
+    if (initialHash) {
+      showPage(initialHash);
+    } else {
+      showPage("home");
     }
   }
 
   /** ==========================================================================
-   * 2. HERO SECTION BUTTONS
+   * 2. HERO SECTION BUTTONS & NAVIGATION
    * ========================================================================== */
   function initHero() {
     const startBtn = $("#startCelebration");
     const openBtn = $("#openSurprise");
+    const scrollDownBtn = $(".scroll-down");
 
     if (startBtn) {
       startBtn.addEventListener("click", () => {
-        const cakeSection = $("#cake");
-        cakeSection?.scrollIntoView({ behavior: "smooth" });
+        showPage("cake");
+        window.location.hash = "cake";
       });
     }
 
     if (openBtn) {
       openBtn.addEventListener("click", () => {
-        const giftSection = $("#gift");
-        giftSection?.scrollIntoView({ behavior: "smooth" });
+        showPage("gift");
+        window.location.hash = "gift";
+      });
+    }
+
+    if (scrollDownBtn) {
+      scrollDownBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        showPage("cake");
+        window.location.hash = "cake";
       });
     }
   }
@@ -119,10 +190,34 @@
     const wish = $("#wishMessage");
     const music = $("#birthdaySong");
     const flames = $$(".flame");
+    const cakeMusicBtn = $("#cakePlayMusic");
 
     if (!cutBtn || !cake) return;
 
     let isCakeCut = false;
+
+    // Cake Music Button Listener
+    if (cakeMusicBtn && music) {
+      cakeMusicBtn.addEventListener("click", () => {
+        if (music.paused) {
+          music.volume = 0.8;
+          music.play().then(() => {
+            cakeMusicBtn.textContent = "⏸ Pause Song 🎶";
+          }).catch(() => {});
+        } else {
+          music.pause();
+          cakeMusicBtn.textContent = "▶ Play Song 🎶";
+        }
+      });
+
+      music.addEventListener("play", () => {
+        if (cakeMusicBtn) cakeMusicBtn.textContent = "⏸ Pause Song 🎶";
+      });
+
+      music.addEventListener("pause", () => {
+        if (cakeMusicBtn) cakeMusicBtn.textContent = "▶ Play Song 🎶";
+      });
+    }
 
     const cleanupParticles = () => {
       $$(".cake-balloon, .cake-heart, .smoke").forEach((el) => el.remove());
@@ -404,7 +499,7 @@
     const memories = [
       {
         title: "🎂 Birthday Together",
-        description: "Tum meri coding ki semicolon ho, Jo na ho toh error hi error aata hai. Tum saath ho toh, Har program successful compile ho jaata hai. 😥❤️",
+        description: "<span id=\"gift-color-1\">Tum meri coding ki semicolon ho, Jo na ho toh error hi error aata hai. Tum saath ho toh, Har program successful compile ho jaata hai. 😥❤️,</span>",
         src: "image/memory1.jpeg"
       },
       {
@@ -805,7 +900,8 @@
     });
 
     restartBtn?.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      showPage("home");
+      window.location.hash = "home";
       const wishMessage = $("#wishMessage");
       if (wishMessage) wishMessage.textContent = "🎂 Ready To Cut The Cake ❤️";
       $("#cakeResult")?.classList.remove("show");
@@ -925,9 +1021,8 @@
           document.body.classList.remove("passcode-locked");
           document.body.classList.add("passcode-unlocked");
 
-          // Navigate to home section smoothly
-          const heroSection = $("#home");
-          heroSection?.scrollIntoView({ behavior: "smooth" });
+          const hash = window.location.hash.replace("#", "");
+          showPage(hash || "home");
 
           // Hide passcode page after fade animation finishes
           timerManager.trackTimeout(setTimeout(() => {

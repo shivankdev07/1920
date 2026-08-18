@@ -1,1337 +1,1191 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A Premium Modern Birthday Surprise Website with Interactive Games, Music, and Memories"
-    />
-    <meta name="theme-color" content="#0d0d1f" />
-    <meta name="color-scheme" content="dark" />
 
-    <title>🎂 Happy Birthday ❤️ | Special Birthday Surprise</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A Premium Modern Birthday Surprise Website with Interactive Games, Music, and Memories" />
+  <meta name="theme-color" content="#0d0d1f" />
+  <meta name="color-scheme" content="dark" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <title>🎂 Happy Birthday ❤️ | Special Birthday Surprise</title>
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-  <body class="passcode-locked">
-    <!-- ===========================================
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="passcode-locked">
+  <!-- ===========================================
                 FLOATING NAVBAR START
     =========================================== -->
-    <header class="navbar-header" id="navbar">
-      <nav class="floating-nav" aria-label="Main Navigation">
-        <a href="#home" class="nav-logo" aria-label="Home">
-          <span class="logo-emoji">🎂</span>
-          <span class="logo-text"
-            >HBD <span class="highlight">Special</span></span
-          >
-        </a>
+  <header class="navbar-header" id="navbar">
+    <nav class="floating-nav" aria-label="Main Navigation">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-emoji">🎂</span>
+        <span class="logo-text">HBD <span class="highlight">Special</span></span>
+      </a>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#cake" class="nav-link">Cake</a></li>
-          <li><a href="#music" class="nav-link">Music</a></li>
-          <li><a href="#roast" class="nav-link">Fun Zone</a></li>
-          <li><a href="#gallery" class="nav-link">Memories</a></li>
-          <li><a href="#gift" class="nav-link">Gift Box</a></li>
-          <li><a href="#games" class="nav-link">Arcade</a></li>
-          <li><a href="#credits" class="nav-link">Wishes</a></li>
-        </ul>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#cake" class="nav-link">Cake</a></li>
+        <li><a href="#music" class="nav-link">Music</a></li>
+        <li><a href="#roast" class="nav-link">Fun Zone</a></li>
+        <li><a href="#gallery" class="nav-link">Memories</a></li>
+        <li><a href="#gift" class="nav-link">Gift Box</a></li>
+        <li><a href="#games" class="nav-link">Arcade</a></li>
+        <li><a href="#credits" class="nav-link">Wishes</a></li>
+      </ul>
 
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle Navigation Menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
-    <!-- ===========================================
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <!-- ===========================================
                 FLOATING NAVBAR END
     =========================================== -->
 
-    <main>
-      <!-- ===========================================
+  <main>
+    <!-- ===========================================
                   PASSCODE LOCK SECTION START
       =========================================== -->
-      <section class="passcode-page" id="passcode">
-        <div class="passcode-bg">
-          <div class="passcode-orb orb-p1"></div>
-          <div class="passcode-orb orb-p2"></div>
-        </div>
+    <section class="passcode-page" id="passcode">
+      <div class="passcode-bg">
+        <div class="passcode-orb orb-p1"></div>
+        <div class="passcode-orb orb-p2"></div>
+      </div>
 
-        <div class="passcode-container">
-          <!-- LEFT PANEL: Photo & Decorative Frame -->
-          <div class="passcode-left">
-            <div class="passcode-photo-wrapper">
-              <div class="passcode-heart-border"></div>
-              <div class="passcode-photo-card">
-                <img
-                  src="image/memory8.jpeg"
-                  alt="Birthday Friend Photo"
-                  class="passcode-friend-photo"
-                  onerror="
+      <div class="passcode-container">
+        <!-- LEFT PANEL: Photo & Decorative Frame -->
+        <div class="passcode-left">
+          <div class="passcode-photo-wrapper">
+            <div class="passcode-heart-border"></div>
+            <div class="passcode-photo-card">
+              <img src="image/memory8.jpeg" alt="Birthday Friend Photo" class="passcode-friend-photo" onerror="
                     if (this.src.includes('image/memory8.jpeg')) {
                       this.src = 'image/memory8.jpeg';
                     } else if (this.src.includes('image/memory8.jpeg')) {
                       this.src = '../image/memory8.jpeg';
                     }
-                  "
-                />
-              </div>
-              <span class="passcode-floating-heart pfh1" aria-hidden="true"
-                >💖</span
-              >
-              <span class="passcode-floating-heart pfh2" aria-hidden="true"
-                >❤️</span
-              >
-              <span class="passcode-floating-heart pfh3" aria-hidden="true"
-                >💕</span
-              >
-              <span class="passcode-floating-star pfs1" aria-hidden="true"
-                >✨</span
-              >
-              <span class="passcode-floating-star pfs2" aria-hidden="true"
-                >⭐</span
-              >
-
-              <div class="passcode-photo-badge">
-                <span>🔒 Secret Surprise Locked 💗</span>
-              </div>
+                  " />
             </div>
-          </div>
+            <span class="passcode-floating-heart pfh1" aria-hidden="true">💖</span>
+            <span class="passcode-floating-heart pfh2" aria-hidden="true">❤️</span>
+            <span class="passcode-floating-heart pfh3" aria-hidden="true">💕</span>
+            <span class="passcode-floating-star pfs1" aria-hidden="true">✨</span>
+            <span class="passcode-floating-star pfs2" aria-hidden="true">⭐</span>
 
-          <!-- RIGHT PANEL: Pink Passcode Interface -->
-          <div class="passcode-right">
-            <div class="passcode-card">
-              <div class="passcode-header">
-                <span class="passcode-icon">🔐</span>
-                <h2 class="passcode-title">Enter a passcode</h2>
-                <p class="passcode-subtitle">
-                  Unlock your special birthday surprise ✨
-                </p>
-              </div>
-
-              <!-- Passcode Display Boxes -->
-              <div class="passcode-boxes" id="passcodeBoxes">
-                <div class="passcode-box" data-index="0"></div>
-                <div class="passcode-box" data-index="1"></div>
-                <div class="passcode-box" data-index="2"></div>
-                <div class="passcode-box" data-index="3"></div>
-              </div>
-
-              <!-- Message feedback area -->
-              <div
-                class="passcode-message"
-                id="passcodeMessage"
-                aria-live="polite"
-              ></div>
-
-              <!-- Keypad -->
-              <div class="passcode-keypad">
-                <button type="button" class="keypad-btn" data-key="1">1</button>
-                <button type="button" class="keypad-btn" data-key="2">2</button>
-                <button type="button" class="keypad-btn" data-key="3">3</button>
-
-                <button type="button" class="keypad-btn" data-key="4">4</button>
-                <button type="button" class="keypad-btn" data-key="5">5</button>
-                <button type="button" class="keypad-btn" data-key="6">6</button>
-
-                <button type="button" class="keypad-btn" data-key="7">7</button>
-                <button type="button" class="keypad-btn" data-key="8">8</button>
-                <button type="button" class="keypad-btn" data-key="9">9</button>
-
-                <button
-                  type="button"
-                  class="keypad-btn action-btn clear-btn"
-                  data-key="*"
-                  title="Clear All"
-                >
-                  *
-                </button>
-                <button type="button" class="keypad-btn" data-key="0">0</button>
-                <button
-                  type="button"
-                  class="keypad-btn action-btn submit-btn"
-                  data-key="#"
-                  title="Submit"
-                >
-                  #
-                </button>
-              </div>
-
-              <div class="passcode-sub-actions">
-                <button
-                  type="button"
-                  class="backspace-btn"
-                  id="passcodeBackspace"
-                  title="Delete last digit"
-                >
-                  ⌫ Backspace
-                </button>
-              </div>
+            <div class="passcode-photo-badge">
+              <span>🔒 Secret Surprise Locked 💗</span>
             </div>
           </div>
         </div>
-      </section>
-      <!-- ===========================================
+
+        <!-- RIGHT PANEL: Pink Passcode Interface -->
+        <div class="passcode-right">
+          <div class="passcode-card">
+            <div class="passcode-header">
+              <span class="passcode-icon">🔐</span>
+              <h2 class="passcode-title">Enter a passcode</h2>
+              <p class="passcode-subtitle">
+                Unlock your special birthday surprise ✨
+              </p>
+            </div>
+
+            <!-- Passcode Display Boxes -->
+            <div class="passcode-boxes" id="passcodeBoxes">
+              <div class="passcode-box" data-index="0"></div>
+              <div class="passcode-box" data-index="1"></div>
+              <div class="passcode-box" data-index="2"></div>
+              <div class="passcode-box" data-index="3"></div>
+            </div>
+
+            <!-- Message feedback area -->
+            <div class="passcode-message" id="passcodeMessage" aria-live="polite"></div>
+
+            <!-- Keypad -->
+            <div class="passcode-keypad">
+              <button type="button" class="keypad-btn" data-key="1">1</button>
+              <button type="button" class="keypad-btn" data-key="2">2</button>
+              <button type="button" class="keypad-btn" data-key="3">3</button>
+
+              <button type="button" class="keypad-btn" data-key="4">4</button>
+              <button type="button" class="keypad-btn" data-key="5">5</button>
+              <button type="button" class="keypad-btn" data-key="6">6</button>
+
+              <button type="button" class="keypad-btn" data-key="7">7</button>
+              <button type="button" class="keypad-btn" data-key="8">8</button>
+              <button type="button" class="keypad-btn" data-key="9">9</button>
+
+              <button type="button" class="keypad-btn action-btn clear-btn" data-key="*" title="Clear All">
+                *
+              </button>
+              <button type="button" class="keypad-btn" data-key="0">0</button>
+              <button type="button" class="keypad-btn action-btn submit-btn" data-key="#" title="Submit">
+                #
+              </button>
+            </div>
+
+            <div class="passcode-sub-actions">
+              <button type="button" class="backspace-btn" id="passcodeBackspace" title="Delete last digit">
+                ⌫ Backspace
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===========================================
                   PASSCODE LOCK SECTION END
       =========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   HERO SECTION START
       =========================================== -->
-      <section class="hero" id="home">
-        <!-- Background Ambient Glow & Particles -->
-        <div class="hero-bg"></div>
-        <div class="ambient-orb orb-1"></div>
-        <div class="ambient-orb orb-2"></div>
-        <div class="ambient-orb orb-3"></div>
+    <section class="hero" id="home">
+      <!-- Background Ambient Glow & Particles -->
+      <div class="hero-bg"></div>
+      <div class="ambient-orb orb-1"></div>
+      <div class="ambient-orb orb-2"></div>
+      <div class="ambient-orb orb-3"></div>
 
-        <!-- Floating Decorative Shapes -->
-        <div class="floating-shapes" aria-hidden="true">
-          <span class="shape circle"></span>
-          <span class="shape heart">❤️</span>
-          <span class="shape star">⭐</span>
-          <span class="shape balloon">🎈</span>
-        </div>
+      <!-- Floating Decorative Shapes -->
+      <div class="floating-shapes" aria-hidden="true">
+        <span class="shape circle"></span>
+        <span class="shape heart">❤️</span>
+        <span class="shape star">⭐</span>
+        <span class="shape balloon">🎈</span>
+      </div>
 
-        <!-- Main Container -->
-        <div class="hero-container">
-          <!-- LEFT SIDE -->
-          <div class="hero-left">
-            <div class="hero-badge-wrapper">
-              <span class="hero-badge"
-                >🎉 Happy Birthday
-                <span id="gift-color-2">My Fav. Person</span></span
-              >
-            </div>
-
-            <h1 class="hero-title">
-              Happy Birthday
-              <span id="friend-name">Roshni ❤️</span>
-            </h1>
-
-            <p class="hero-subtitle">
-              Today, the world celebrates someone truly special—a girl whose
-              smile can brighten any day.
-            </p>
-
-            <p class="hero-description">
-              <span id="gift-color-1">Today is all about you, Roshni. ❤️</span>
-              <br />
-              Tumhari smile mein kuch toh baat hai, jo ek normal sa moment bhi
-              special bana deti hai.✨ Tum shayad khud nahi jaanti, Pata nahi
-              tum mein kya baat hai, tumhare paas rehkar bas dil, dimak ko achha
-              sa lagta hai.
-              <br /><span id="gift-color-1">You’re one of a kind.</span>
-              Bas hamesha aise hi smile karti rehna, apne dreams ko chase karna,
-              aur khud par believe rakhna.🌸 **You deserve all the happiness in
-              the world.❤️**
-              <br />
-              <span id="gift-color-1">
-                Happy Birthday, My Favourite Person. 🎂✨
-              </span>
-            </p>
-
-            <!-- Buttons -->
-            <div class="hero-buttons">
-              <button
-                class="btn btn-primary"
-                id="startCelebration"
-                type="button"
-              >
-                <span>🎊 Start Celebration</span>
-              </button>
-
-              <button class="btn btn-secondary" id="openSurprise" type="button">
-                <span>🎁 Open Surprise</span>
-              </button>
-            </div>
-
-            <!-- Hero Stats Cards -->
-            <div class="hero-stats">
-              <div class="stat-card">
-                <span class="stat-icon">🎂</span>
-                <span class="stat-label">Birthday</span>
-              </div>
-
-              <div class="stat-card">
-                <span class="stat-icon">❤️</span>
-                <span class="stat-label">Fav. Person</span>
-              </div>
-
-              <div class="stat-card">
-                <span class="stat-icon">🎉</span>
-                <span class="stat-label">Memories</span>
-              </div>
-            </div>
+      <!-- Main Container -->
+      <div class="hero-container">
+        <!-- LEFT SIDE -->
+        <div class="hero-left">
+          <div class="hero-badge-wrapper">
+            <span class="hero-badge">🎉 Happy Birthday
+              <span id="gift-color-2">My Fav. Person</span></span>
           </div>
 
-          <!-- RIGHT SIDE -->
-          <div class="hero-right">
-            <div class="photo-wrapper">
-              <!-- Rotating Aura Ring -->
-              <div class="glow-ring"></div>
+          <h1 class="hero-title">
+            Happy Birthday
+            <span id="friend-name">Roshni ❤️</span>
+          </h1>
 
-              <!-- Photo Card -->
-              <div class="photo-card">
-                <img
-                  src="image/memory6.jpeg"
-                  alt="Birthday Friend Photo"
-                  class="friend-photo"
-                  loading="lazy"
-                  draggable="false"
-                  onerror="
+          <p class="hero-subtitle">
+            Today, the world celebrates someone truly special—a girl whose
+            smile can brighten any day.
+          </p>
+
+          <p class="hero-description">
+            <span id="gift-color-1">Today is all about you, Roshni. ❤️</span>
+            <br />
+            Tumhari smile mein kuch toh baat hai, jo ek normal sa moment bhi
+            special bana deti hai.✨ Tum shayad khud nahi jaanti, Pata nahi
+            tum mein kya baat hai, tumhare paas rehkar bas dil, dimak ko achha
+            sa lagta hai.
+            <br /><span id="gift-color-1">You’re one of a kind.</span>
+            Bas hamesha aise hi smile karti rehna, apne dreams ko chase karna,
+            aur khud par believe rakhna.🌸 **You deserve all the happiness in
+            the world.❤️**
+            <br />
+            <span id="gift-color-1">
+              Happy Birthday, My Favourite Person. 🎂✨
+            </span>
+          </p>
+
+          <!-- Buttons -->
+          <div class="hero-buttons">
+            <button class="btn btn-primary" id="startCelebration" type="button">
+              <span>🎊 Start Celebration</span>
+            </button>
+
+            <button class="btn btn-secondary" id="openSurprise" type="button">
+              <span>🎁 Open Surprise</span>
+            </button>
+          </div>
+
+          <!-- Hero Stats Cards -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-icon">🎂</span>
+              <span class="stat-label">Birthday</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-icon">❤️</span>
+              <span class="stat-label">Fav. Person</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-icon">🎉</span>
+              <span class="stat-label">Memories</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hero-right">
+          <div class="photo-wrapper">
+            <!-- Rotating Aura Ring -->
+            <div class="glow-ring"></div>
+
+            <!-- Photo Card -->
+            <div class="photo-card">
+              <img src="image/memory6.jpeg" alt="Birthday Friend Photo" class="friend-photo" loading="lazy"
+                draggable="false" onerror="
                     if (this.src.includes('image/memory6.jpeg')) {
                       this.src = 'image/memory6.jpeg';
                     } else if (this.src.includes('image/memory6.jpeg')) {
                       this.src = '../image/memory6.jpeg';
                     }
-                  "
-                />
-              </div>
+                  " />
+            </div>
 
-              <!-- Floating Hearts -->
-              <span class="floating-heart heart1" aria-hidden="true">💖</span>
-              <span class="floating-heart heart2" aria-hidden="true">❤️</span>
-              <span class="floating-heart heart3" aria-hidden="true">💕</span>
+            <!-- Floating Hearts -->
+            <span class="floating-heart heart1" aria-hidden="true">💖</span>
+            <span class="floating-heart heart2" aria-hidden="true">❤️</span>
+            <span class="floating-heart heart3" aria-hidden="true">💕</span>
 
-              <!-- Floating Stars -->
-              <span class="floating-star star1" aria-hidden="true">⭐</span>
-              <span class="floating-star star2" aria-hidden="true">✨</span>
-              <span class="floating-star star3" aria-hidden="true">🌟</span>
+            <!-- Floating Stars -->
+            <span class="floating-star star1" aria-hidden="true">⭐</span>
+            <span class="floating-star star2" aria-hidden="true">✨</span>
+            <span class="floating-star star3" aria-hidden="true">🌟</span>
 
-              <!-- Floating Balloons -->
-              <span class="floating-balloon balloon1" aria-hidden="true"
-                >🎈</span
-              >
-              <span class="floating-balloon balloon2" aria-hidden="true"
-                >🎈</span
-              >
+            <!-- Floating Balloons -->
+            <span class="floating-balloon balloon1" aria-hidden="true">🎈</span>
+            <span class="floating-balloon balloon2" aria-hidden="true">🎈</span>
 
-              <!-- Floating Gifts -->
-              <span class="floating-gift gift1" aria-hidden="true">🎁</span>
-              <span class="floating-gift gift2" aria-hidden="true">🎀</span>
+            <!-- Floating Gifts -->
+            <span class="floating-gift gift1" aria-hidden="true">🎁</span>
+            <span class="floating-gift gift2" aria-hidden="true">🎀</span>
 
-              <!-- Badge -->
-              <div class="best-friend-badge">
-                <span>🌟 Star of the Day 🌟</span>
-              </div>
+            <!-- Badge -->
+            <div class="best-friend-badge">
+              <span>🌟 Star of the Day 🌟</span>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Scroll Down Indicator -->
-        <a
-          href="#cake"
-          class="scroll-down"
-          aria-label="Scroll down to cake section"
-        >
-          <div class="mouse">
-            <div class="wheel"></div>
-          </div>
-          <p>Scroll Down</p>
-        </a>
-      </section>
-      <!-- ===========================================
+      <!-- Scroll Down Indicator -->
+      <a href="#cake" class="scroll-down" aria-label="Scroll down to cake section">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p>Scroll Down</p>
+      </a>
+
+      <!-- Page Navigation Controls -->
+      <div class="page-nav-controls">
+        <button type="button" class="page-nav-btn next-page-btn" data-target="cake">
+          Next: Cake 🎂 ➡
+        </button>
+      </div>
+    </section>
+    <!-- ===========================================
                   HERO SECTION END
       =========================================== -->
 
-      <!-- ==========================================
+    <!-- ==========================================
                   CAKE SECTION START
       ========================================== -->
-      <section class="cake-section" id="cake">
-        <!-- Background -->
-        <div class="cake-bg">
-          <div class="cake-stars"></div>
-          <div class="cake-hearts"></div>
-          <div class="cake-sparkles"></div>
+    <section class="cake-section" id="cake">
+      <!-- Background -->
+      <div class="cake-bg">
+        <div class="cake-stars"></div>
+        <div class="cake-hearts"></div>
+        <div class="cake-sparkles"></div>
+      </div>
+
+      <div class="cake-container">
+        <!-- Heading -->
+        <div class="cake-heading">
+          <span class="cake-tag">🎂 Birthday Special</span>
+          <h2>Time To Cut The Cake 🎉</h2>
+          <p>Make a beautiful wish before cutting the cake ❤️</p>
         </div>
 
-        <div class="cake-container">
-          <!-- Heading -->
-          <div class="cake-heading">
-            <span class="cake-tag">🎂 Birthday Special</span>
-            <h2>Time To Cut The Cake 🎉</h2>
-            <p>Make a beautiful wish before cutting the cake ❤️</p>
+        <!-- Cake Wrapper -->
+        <div class="cake-wrapper">
+          <!-- Glow -->
+          <div class="cake-glow"></div>
+
+          <!-- Knife -->
+          <div class="knife" id="knife" aria-hidden="true">
+            <div class="knife-handle"></div>
+            <div class="knife-blade"></div>
           </div>
 
-          <!-- Cake Wrapper -->
-          <div class="cake-wrapper">
-            <!-- Glow -->
-            <div class="cake-glow"></div>
-
-            <!-- Knife -->
-            <div class="knife" id="knife" aria-hidden="true">
-              <div class="knife-handle"></div>
-              <div class="knife-blade"></div>
-            </div>
-
-            <!-- Cake -->
-            <div class="cake-body" id="cakeBody">
-              <!-- Candles -->
-              <div class="candles">
-                <div class="candle">
-                  <div class="flame"></div>
-                </div>
-                <div class="candle">
-                  <div class="flame"></div>
-                </div>
-                <div class="candle">
-                  <div class="flame"></div>
-                </div>
+          <!-- Cake -->
+          <div class="cake-body" id="cakeBody">
+            <!-- Candles -->
+            <div class="candles">
+              <div class="candle">
+                <div class="flame"></div>
               </div>
-
-              <!-- Layers -->
-              <div class="cake-layer top-layer"></div>
-              <div class="cake-layer middle-layer"></div>
-              <div class="cake-layer bottom-layer"></div>
-
-              <!-- Cream Drips -->
-              <div class="cake-cream"></div>
-
-              <!-- Cherry Top -->
-              <div class="cake-cherry">🍒</div>
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
+              <div class="candle">
+                <div class="flame"></div>
+              </div>
             </div>
-          </div>
 
-          <!-- Buttons -->
-          <div class="cake-buttons">
-            <button id="cutCake" class="cake-btn cut-btn" type="button">
-              🔪 Cut Cake
-            </button>
+            <!-- Layers -->
+            <div class="cake-layer top-layer"></div>
+            <div class="cake-layer middle-layer"></div>
+            <div class="cake-layer bottom-layer"></div>
 
-            <button id="resetCake" class="cake-btn reset-btn" type="button">
-              🔄 Reset Cake
-            </button>
-          </div>
+            <!-- Cream Drips -->
+            <div class="cake-cream"></div>
 
-          <!-- Result Card -->
-          <div id="cakeResult" class="cake-result">
-            <h2>🎉 Happy Birthday 🎉</h2>
-            <p id="wishMessage">🎂 Ready To Cut The Cake ❤️</p>
+            <!-- Cherry Top -->
+            <div class="cake-cherry">🍒</div>
           </div>
         </div>
-      </section>
-      <!-- ==========================================
+
+        <!-- Buttons -->
+        <div class="cake-buttons">
+          <button id="cutCake" class="cake-btn cut-btn" type="button">
+            🔪 Cut Cake
+          </button>
+
+          <button id="resetCake" class="cake-btn reset-btn" type="button">
+            🔄 Reset Cake
+          </button>
+        </div>
+
+        <!-- Cake Music Control Box -->
+        <div class="cake-music-box">
+          <div class="cake-music-info">
+            <span class="cake-music-icon">🎵</span>
+            <span class="cake-music-text">Play Birthday Music:</span>
+          </div>
+          <button id="cakePlayMusic" class="cake-music-btn" type="button">
+            ▶ Play Song 🎶
+          </button>
+        </div>
+
+        <!-- Page Navigation Controls (Just below music box) -->
+        <div class="page-nav-controls" style="margin-top: 18px; margin-bottom: 24px;">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="home">
+            ⬅ Previous: Home
+          </button>
+          <button type="button" class="page-nav-btn next-page-btn" data-target="music">
+            Next: Music 🎵 ➡
+          </button>
+        </div>
+
+        <!-- Result Card -->
+        <div id="cakeResult" class="cake-result">
+          <h2>🎉 Happy Birthday 🎉</h2>
+          <p id="wishMessage">🎂 Ready To Cut The Cake ❤️</p>
+        </div>
+      </div>
+    </section>
+    <!-- ==========================================
                   CAKE SECTION END
       ========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   MUSIC PLAYER SECTION START
       =========================================== -->
-      <section class="music-section" id="music">
-        <div class="music-bg"></div>
+    <section class="music-section" id="music">
+      <div class="music-bg"></div>
 
-        <div class="music-container">
-          <!-- Heading -->
-          <div class="music-heading">
-            <span class="music-tag">🎵 Birthday Playlist</span>
-            <h2>Music Makes Every Birthday Better ❤️</h2>
-            <p>Press play and enjoy your special day with sound and vibes.</p>
-          </div>
+      <div class="music-container">
+        <!-- Heading -->
+        <div class="music-heading">
+          <span class="music-tag">🎵 Birthday Playlist</span>
+          <h2>Music Makes Every Birthday Better ❤️</h2>
+          <p>Press play and enjoy your special day with sound and vibes.</p>
+        </div>
 
-          <!-- Player Card -->
-          <div class="music-player">
-            <!-- Album Cover -->
-            <div class="album-wrapper">
-              <div class="album-ring"></div>
-              <img
-                src="assets/bts.jpeg"
-                alt="Birthday Song Album Cover"
-                class="album-cover"
-                draggable="false"
-                onerror="
+        <!-- Player Card -->
+        <div class="music-player">
+          <!-- Album Cover -->
+          <div class="album-wrapper">
+            <div class="album-ring"></div>
+            <img src="assets/bts.jpeg" alt="Birthday Song Album Cover" class="album-cover" draggable="false" onerror="
                   if (this.src.includes('assets/bts.jpeg')) {
                     this.src = 'assets/bts.jpeg';
                   } else if (this.src.includes('assets/bts.jpeg')) {
                     this.src = 'assets/bts.jpeg';
                   }
-                "
-              />
-            </div>
+                " />
+          </div>
 
-            <!-- Song Info -->
-            <div class="song-info">
-              <h3 id="songTitle">Happy Birthday Song</h3>
-              <p id="artistName">Made with ❤️ especially for you</p>
-            </div>
+          <!-- Song Info -->
+          <div class="song-info">
+            <h3 id="songTitle">Happy Birthday Song</h3>
+            <p id="artistName">Made with ❤️ especially for you</p>
+          </div>
 
-            <!-- Progress Bar -->
-            <div class="progress-wrapper">
-              <span id="currentTime">0:00</span>
-              <input
-                type="range"
-                id="progressBar"
-                min="0"
-                max="100"
-                value="0"
-                aria-label="Track Progress"
-              />
-              <span id="duration">0:00</span>
-            </div>
+          <!-- Progress Bar -->
+          <div class="progress-wrapper">
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progressBar" min="0" max="100" value="0" aria-label="Track Progress" />
+            <span id="duration">0:00</span>
+          </div>
 
-            <!-- Controls -->
-            <div class="music-controls">
-              <button
-                id="prevSong"
-                class="music-btn"
-                type="button"
-                aria-label="Previous Track"
-              >
-                ⏮
-              </button>
-              <button
-                id="playSong"
-                class="music-btn play-btn"
-                type="button"
-                aria-label="Play Track"
-              >
-                ▶
-              </button>
-              <button
-                id="pauseSong"
-                class="music-btn"
-                type="button"
-                aria-label="Pause Track"
-              >
-                ⏸
-              </button>
-              <button
-                id="nextSong"
-                class="music-btn"
-                type="button"
-                aria-label="Next Track"
-              >
-                ⏭
-              </button>
-            </div>
+          <!-- Controls -->
+          <div class="music-controls">
+            <button id="prevSong" class="music-btn" type="button" aria-label="Previous Track">
+              ⏮
+            </button>
+            <button id="playSong" class="music-btn play-btn" type="button" aria-label="Play Track">
+              ▶
+            </button>
+            <button id="pauseSong" class="music-btn" type="button" aria-label="Pause Track">
+              ⏸
+            </button>
+            <button id="nextSong" class="music-btn" type="button" aria-label="Next Track">
+              ⏭
+            </button>
+          </div>
 
-            <!-- Volume Control -->
-            <div class="volume-wrapper">
-              <span class="volume-icon">🔊</span>
-              <input
-                type="range"
-                id="volumeBar"
-                min="0"
-                max="1"
-                step="0.01"
-                value="0.8"
-                aria-label="Volume Control"
-              />
-            </div>
+          <!-- Volume Control -->
+          <div class="volume-wrapper">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="0.8" aria-label="Volume Control" />
+          </div>
 
-            <!-- Animated Equalizer -->
-            <div class="equalizer" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+          <!-- Animated Equalizer -->
+          <div class="equalizer" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
 
-        <!-- Audio Element -->
-        <audio id="birthdaySong" preload="metadata">
-          <source src="music/birthday.mp3" type="audio/mpeg" />
-          <source src="music/birthday.mp3" type="audio/mpeg" />
-          <source src="../music/birthday.mp3" type="audio/mpeg" />
-        </audio>
-      </section>
-      <!-- ===========================================
+        <!-- Page Navigation Controls -->
+        <div class="page-nav-controls">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="cake">
+            ⬅ Previous: Cake
+          </button>
+          <button type="button" class="page-nav-btn next-page-btn" data-target="roast">
+            Next: Fun Zone 😂 ➡
+          </button>
+        </div>
+      </div>
+
+      <!-- Audio Element -->
+      <audio id="birthdaySong" preload="metadata">
+        <source src="music/birthday.mp3" type="audio/mpeg" />
+        <source src="music/birthday.mp3" type="audio/mpeg" />
+        <source src="../music/birthday.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+    <!-- ===========================================
                   MUSIC SECTION END
       =========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   BIRTHDAY ROAST ZONE START
       =========================================== -->
-      <section class="roast-section" id="roast">
-        <div class="roast-bg"></div>
+    <section class="roast-section" id="roast">
+      <div class="roast-bg"></div>
 
-        <div class="roast-container">
-          <!-- Heading -->
-          <div class="roast-heading">
-            <span class="roast-tag">😂 Fun Zone</span>
-            <h2>Birthday Roast Generator 🔥</h2>
-            <p>
-              Warning ⚠️ These roasts are made strictly for laughs. Don't take
-              them seriously! 😂
-            </p>
-          </div>
+      <div class="roast-container">
+        <!-- Heading -->
+        <div class="roast-heading">
+          <span class="roast-tag">😂 Fun Zone</span>
+          <h2>Birthday Roast Generator 🔥</h2>
+          <p>
+            Warning ⚠️ These roasts are made strictly for laughs. Don't take
+            them seriously! 😂
+          </p>
+        </div>
 
-          <!-- Main Roast Card -->
-          <div class="roast-card">
-            <div class="roast-emoji">🤣</div>
+        <!-- Main Roast Card -->
+        <div class="roast-card">
+          <div class="roast-emoji">🤣</div>
 
-            <h3>Random Birthday Roast</h3>
+          <h3>Random Birthday Roast</h3>
 
-            <p id="roastText">
-              Click the button below to generate your first roast 😂
-            </p>
+          <p id="roastText">
+            Click the button below to generate your first roast 😂
+          </p>
 
-            <!-- Buttons -->
-            <div class="roast-buttons">
-              <button
-                id="generateRoast"
-                class="roast-btn primary"
-                type="button"
-              >
-                🎲 Generate Roast
-              </button>
+          <!-- Buttons -->
+          <div class="roast-buttons">
+            <button id="generateRoast" class="roast-btn primary" type="button">
+              🎲 Generate Roast
+            </button>
 
-              <button
-                id="anotherRoast"
-                class="roast-btn secondary"
-                type="button"
-              >
-                🔄 Another One
-              </button>
-            </div>
-          </div>
-
-          <!-- Stats Grid -->
-          <div class="roast-stats">
-            <div class="roast-stat">
-              <h3 id="roastCount">0</h3>
-              <span>Roasts Generated</span>
-            </div>
-
-            <div class="roast-stat">
-              <h3>100+</h3>
-              <span>Funny Roasts</span>
-            </div>
-
-            <div class="roast-stat">
-              <h3>∞</h3>
-              <span>Unlimited Fun</span>
-            </div>
-          </div>
-
-          <!-- Achievement Banner -->
-          <div class="roast-achievement">
-            🏆
-            <span>Keep generating roasts to unlock hidden achievements!</span>
+            <button id="anotherRoast" class="roast-btn secondary" type="button">
+              🔄 Another One
+            </button>
           </div>
         </div>
-      </section>
-      <!-- ===========================================
+
+        <!-- Stats Grid -->
+        <div class="roast-stats">
+          <div class="roast-stat">
+            <h3 id="roastCount">0</h3>
+            <span>Roasts Generated</span>
+          </div>
+
+          <div class="roast-stat">
+            <h3>100+</h3>
+            <span>Funny Roasts</span>
+          </div>
+
+          <div class="roast-stat">
+            <h3>∞</h3>
+            <span>Unlimited Fun</span>
+          </div>
+        </div>
+
+        <!-- Achievement Banner -->
+        <div class="roast-achievement">
+          🏆
+          <span>Keep generating roasts to unlock hidden achievements!</span>
+        </div>
+
+        <!-- Page Navigation Controls -->
+        <div class="page-nav-controls">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="music">
+            ⬅ Previous: Music
+          </button>
+          <button type="button" class="page-nav-btn next-page-btn" data-target="gallery">
+            Next: Memories 📸 ➡
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ===========================================
                   ROAST SECTION END
       =========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   MEMORY GALLERY START
       =========================================== -->
-      <section class="gallery-section" id="gallery">
-        <div class="gallery-bg"></div>
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-bg"></div>
 
-        <div class="gallery-container">
-          <!-- Heading -->
-          <div class="gallery-heading">
-            <span class="gallery-tag">📸 Best Memories</span>
-            <h2>Our Beautiful Journey Together ❤️</h2>
-            <p>
-              Every picture tells a story... Every memory brings a smile...
-              Every moment is unforgettable.
-            </p>
-          </div>
+      <div class="gallery-container">
+        <!-- Heading -->
+        <div class="gallery-heading">
+          <span class="gallery-tag">📸 Best Memories</span>
+          <h2>Our Beautiful Journey Together ❤️</h2>
+          <p>
+            Every picture tells a story... Every memory brings a smile...
+            Every moment is unforgettable.
+          </p>
+        </div>
 
-          <!-- Gallery Grid -->
-          <div class="gallery-grid">
-            <!-- Card 1 -->
-            <div class="memory-card">
-              <img
-                src="image/memory1.jpeg"
-                alt="Birthday Together Memory"
-                loading="lazy"
-                onerror="
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- Card 1 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory1.jpeg" alt="Birthday Together Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory1.jpeg')) {
                     this.src = 'assets/image/memory1.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>🎂 Birthday Together</h3>
-                <button class="memory-btn" data-id="0" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>🎂 Birthday Together</h3>
+              <button class="memory-btn" data-id="0" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 2 -->
-            <div class="memory-card">
-              <img
-                src="image/memory2.jpeg"
-                alt="Butterfly Vibes Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 2 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory2.jpeg" alt="Butterfly Vibes Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory2.jpeg')) {
                     this.src = 'assets/image/memory2.jpg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>🦋 Butterfly Vibes</h3>
-                <button class="memory-btn" data-id="1" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>🦋 Butterfly Vibes</h3>
+              <button class="memory-btn" data-id="1" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 3 -->
-            <div class="memory-card">
-              <img
-                src="image/memory3.jpeg"
-                alt="Quietly Beautiful Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 3 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory3.jpeg" alt="Quietly Beautiful Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory3.jpeg')) {
                     this.src = 'assets/image/memory3.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>🌸 Quietly Beautiful</h3>
-                <button class="memory-btn" data-id="2" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>🌸 Quietly Beautiful</h3>
+              <button class="memory-btn" data-id="2" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 4 -->
-            <div class="memory-card">
-              <img
-                src="image/memory4.jpeg"
-                alt="Grace & Confidence Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 4 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory4.jpeg" alt="Grace & Confidence Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory4.jpeg')) {
                     this.src = 'assets/image/memory4.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>✨ Grace & Confidence</h3>
-                <button class="memory-btn" data-id="3" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>✨ Grace & Confidence</h3>
+              <button class="memory-btn" data-id="3" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 5 -->
-            <div class="memory-card">
-              <img
-                src="image/memory5.jpeg"
-                alt="Togetherness Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 5 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory5.jpeg" alt="Togetherness Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory5.jpeg')) {
                     this.src = 'assets/image/memory5.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>❤️ Togetherness</h3>
-                <button class="memory-btn" data-id="4" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>❤️ Togetherness</h3>
+              <button class="memory-btn" data-id="4" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 6 -->
-            <div class="memory-card">
-              <img
-                src="image/memory6.jpeg"
-                alt="Sweetest Moment Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 6 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory6.jpeg" alt="Sweetest Moment Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory6.jpeg')) {
                     this.src = 'assets/image/memory6.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>🎂 Sweetest Moment</h3>
-                <button class="memory-btn" data-id="5" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>🎂 Sweetest Moment</h3>
+              <button class="memory-btn" data-id="5" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 7 -->
-            <div class="memory-card">
-              <img
-                src="image/memory7.jpeg"
-                alt="Lost In The Moment Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 7 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory7.jpeg" alt="Lost In The Moment Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory7.jpeg')) {
                     this.src = 'assets/image/memory7.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>🌙 Lost In The Moment</h3>
-                <button class="memory-btn" data-id="6" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>🌙 Lost In The Moment</h3>
+              <button class="memory-btn" data-id="6" type="button">
+                ❤️ View Memory
+              </button>
             </div>
+          </div>
 
-            <!-- Card 8 -->
-            <div class="memory-card">
-              <img
-                src="image/memory8.jpeg"
-                alt="Under The Lights Memory"
-                loading="lazy"
-                onerror="
+          <!-- Card 8 -->
+          <div class="memory-card">
+            <span class="tap-me-badge">Tap Me 👆</span>
+            <img src="image/memory8.jpeg" alt="Under The Lights Memory" loading="lazy" onerror="
                   if (this.src.includes('image/memory8.jpeg')) {
                     this.src = 'assets/image/memory8.jpeg';
                   }
-                "
-              />
-              <div class="memory-overlay">
-                <h3>🌃 Under The Lights</h3>
-                <button class="memory-btn" data-id="7" type="button">
-                  ❤️ View Memory
-                </button>
-              </div>
+                " />
+            <div class="memory-overlay">
+              <h3>🌃 Under The Lights</h3>
+              <button class="memory-btn" data-id="7" type="button">
+                ❤️ View Memory
+              </button>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- MEMORY POPUP MODAL -->
-      <div
-        class="memory-modal"
-        id="memoryModal"
-        role="dialog"
-        aria-hidden="true"
-        aria-labelledby="popupTitle"
-      >
-        <div class="memory-popup">
-          <button
-            class="memory-close"
-            id="closeMemory"
-            type="button"
-            aria-label="Close memory modal"
-          >
-            ✖
+        <!-- Page Navigation Controls -->
+        <div class="page-nav-controls">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="roast">
+            ⬅ Previous: Fun Zone
           </button>
-
-          <img id="popupImage" src="" alt="Selected Memory" />
-
-          <h2 id="popupTitle">Memory Title</h2>
-          <p id="popupDescription">Memory Description</p>
-
-          <div class="memory-controls">
-            <button id="prevMemory" type="button">⬅ Previous</button>
-            <button id="nextMemory" type="button">Next ➡</button>
-          </div>
+          <button type="button" class="page-nav-btn next-page-btn" data-target="gift">
+            Next: Gift Box 🎁 ➡
+          </button>
         </div>
       </div>
-      <!-- ===========================================
+    </section>
+
+    <!-- MEMORY POPUP MODAL -->
+    <div class="memory-modal" id="memoryModal" role="dialog" aria-hidden="true" aria-labelledby="popupTitle">
+      <div class="memory-popup">
+        <button class="memory-close" id="closeMemory" type="button" aria-label="Close memory modal">
+          ✖
+        </button>
+
+        <img id="popupImage" src="" alt="Selected Memory" />
+
+        <h2 id="popupTitle">Memory Title</h2>
+        <p id="popupDescription">Memory Description</p>
+
+        <div class="memory-controls">
+          <button id="prevMemory" type="button">⬅ Previous</button>
+          <button id="nextMemory" type="button">Next ➡</button>
+        </div>
+      </div>
+    </div>
+    <!-- ===========================================
                   MEMORY GALLERY END
       =========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   MYSTERY GIFT SECTION START
       =========================================== -->
-      <section class="gift-section" id="gift">
-        <div class="gift-bg"></div>
+    <section class="gift-section" id="gift">
+      <div class="gift-bg"></div>
 
-        <div class="gift-container">
-          <!-- Heading -->
-          <div class="gift-heading">
-            <span class="gift-tag">🎁 Mystery Gift</span>
-            <h2>A Special Surprise Is Waiting...</h2>
-            <p>
-              Nobody knows what's inside this magical gift box. Click the button
-              and let's find out! ✨
-            </p>
-          </div>
+      <div class="gift-container">
+        <!-- Heading -->
+        <div class="gift-heading">
+          <span class="gift-tag">🎁 Mystery Gift</span>
+          <h2>A Special Surprise Is Waiting...</h2>
+          <p>
+            Nobody knows what's inside this magical gift box. Click the button
+            and let's find out! ✨
+          </p>
+        </div>
 
-          <!-- Gift Boxes Grid Container -->
-          <div class="gift-grid">
-            <!-- GIFT BOX 1: Existing Mystery Gift -->
-            <div class="gift-card-item">
-              <h3 class="gift-item-title">🎁 Mystery Gift</h3>
-              <div class="gift-wrapper">
-                <div class="gift-glow"></div>
+        <!-- Gift Boxes Grid Container -->
+        <div class="gift-grid">
+          <!-- GIFT BOX 1: Existing Mystery Gift -->
+          <div class="gift-card-item">
+            <h3 class="gift-item-title">🎁 Mystery Gift</h3>
+            <div class="gift-wrapper">
+              <div class="gift-glow"></div>
 
-                <div
-                  class="gift-box"
-                  id="giftBox"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Interactive Mystery Gift Box"
-                >
-                  <!-- Lid -->
-                  <div class="gift-lid">
-                    <div class="gift-ribbon-v"></div>
-                    <div class="gift-ribbon-h"></div>
-                    <div class="gift-bow">🎀</div>
-                  </div>
-
-                  <!-- Body -->
-                  <div class="gift-body">
-                    <div class="gift-ribbon-v"></div>
-                    <div class="gift-ribbon-h"></div>
-                  </div>
+              <div class="gift-box" id="giftBox" tabindex="0" role="button" aria-label="Interactive Mystery Gift Box">
+                <!-- Lid -->
+                <div class="gift-lid">
+                  <div class="gift-ribbon-v"></div>
+                  <div class="gift-ribbon-h"></div>
+                  <div class="gift-bow">🎀</div>
                 </div>
-              </div>
 
-              <!-- Button -->
-              <div class="gift-buttons">
-                <button id="openGift" class="gift-btn" type="button">
-                  🎁 Open Gift
-                </button>
+                <!-- Body -->
+                <div class="gift-body">
+                  <div class="gift-ribbon-v"></div>
+                  <div class="gift-ribbon-h"></div>
+                </div>
               </div>
             </div>
 
-            <!-- GIFT BOX 2: Birthday Surprise Gift -->
-            <div class="gift-card-item">
-              <h3 class="gift-item-title">🎁 Birthday Surprise Gift</h3>
-              <div class="gift-wrapper">
-                <div class="gift-glow"></div>
-
-                <div
-                  class="gift-box"
-                  id="surpriseGiftBox"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Interactive Birthday Surprise Gift Box"
-                >
-                  <!-- Lid -->
-                  <div class="gift-lid">
-                    <div class="gift-ribbon-v"></div>
-                    <div class="gift-ribbon-h"></div>
-                    <div class="gift-bow">🎀</div>
-                  </div>
-
-                  <!-- Body -->
-                  <div class="gift-body">
-                    <div class="gift-ribbon-v"></div>
-                    <div class="gift-ribbon-h"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Button -->
-              <div class="gift-buttons">
-                <button id="openSurpriseGift" class="gift-btn" type="button">
-                  🎁 Open Surprise Gift
-                </button>
-              </div>
+            <!-- Button -->
+            <div class="gift-buttons">
+              <button id="openGift" class="gift-btn" type="button">
+                🎁 Open Gift
+              </button>
             </div>
           </div>
 
-          <!-- Counters -->
-          <div class="gift-stats">
-            <div class="gift-card">
-              <h3 id="giftCount">0</h3>
-              <span>Gifts Opened</span>
+          <!-- GIFT BOX 2: Birthday Surprise Gift -->
+          <div class="gift-card-item">
+            <h3 class="gift-item-title">🎁 Birthday Surprise Gift</h3>
+            <div class="gift-wrapper">
+              <div class="gift-glow"></div>
+
+              <div class="gift-box" id="surpriseGiftBox" tabindex="0" role="button"
+                aria-label="Interactive Birthday Surprise Gift Box">
+                <!-- Lid -->
+                <div class="gift-lid">
+                  <div class="gift-ribbon-v"></div>
+                  <div class="gift-ribbon-h"></div>
+                  <div class="gift-bow">🎀</div>
+                </div>
+
+                <!-- Body -->
+                <div class="gift-body">
+                  <div class="gift-ribbon-v"></div>
+                  <div class="gift-ribbon-h"></div>
+                </div>
+              </div>
             </div>
 
-            <div class="gift-card">
-              <h3>🎉</h3>
-              <span>Unlimited Surprises</span>
+            <!-- Button -->
+            <div class="gift-buttons">
+              <button id="openSurpriseGift" class="gift-btn" type="button">
+                🎁 Open Surprise Gift
+              </button>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- FIRST GIFT POPUP MODAL -->
-      <div
-        class="gift-modal"
-        id="giftModal"
-        role="dialog"
-        aria-hidden="true"
-        aria-labelledby="giftTitle"
-      >
-        <div class="gift-popup">
-          <button
-            id="closeGift"
-            class="gift-close"
-            type="button"
-            aria-label="Close gift popup"
-          >
-            ✖
+        <!-- Counters -->
+        <div class="gift-stats">
+          <div class="gift-card">
+            <h3 id="giftCount">0</h3>
+            <span>Gifts Opened</span>
+          </div>
+
+          <div class="gift-card">
+            <h3>🎉</h3>
+            <span>Unlimited Surprises</span>
+          </div>
+        </div>
+
+        <!-- Page Navigation Controls -->
+        <div class="page-nav-controls">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="gallery">
+            ⬅ Previous: Memories
           </button>
-
-          <div class="gift-icon" id="giftIcon">🎁</div>
-
-          <h2 id="giftTitle">Surprise Gift</h2>
-          <p id="giftMessage">Your surprise will appear here...</p>
-
-          <button id="nextGift" class="gift-next" type="button">
-            🎉 Next Surprise
+          <button type="button" class="page-nav-btn next-page-btn" data-target="games">
+            Next: Arcade 🎮 ➡
           </button>
         </div>
       </div>
+    </section>
 
-      <!-- SECOND GIFT POPUP MODAL (Birthday Surprise Gift) -->
-      <div
-        class="gift-modal surprise-gift-modal"
-        id="surpriseGiftModal"
-        role="dialog"
-        aria-hidden="true"
-        aria-labelledby="surpriseGiftTitle"
-      >
-        <div class="gift-popup surprise-gift-popup">
-          <!-- Floating sparkles for aesthetic atmosphere -->
-          <span class="modal-sparkle s1" aria-hidden="true">✨</span>
-          <span class="modal-sparkle s2" aria-hidden="true">💖</span>
-          <span class="modal-sparkle s3" aria-hidden="true">⭐</span>
-          <span class="modal-sparkle s4" aria-hidden="true">✨</span>
+    <!-- FIRST GIFT POPUP MODAL -->
+    <div class="gift-modal" id="giftModal" role="dialog" aria-hidden="true" aria-labelledby="giftTitle">
+      <div class="gift-popup">
+        <button id="closeGift" class="gift-close" type="button" aria-label="Close gift popup">
+          ✖
+        </button>
 
-          <button
-            id="closeSurpriseGift"
-            class="gift-close"
-            type="button"
-            aria-label="Close surprise gift popup"
-          >
-            ✖
-          </button>
+        <div class="gift-icon" id="giftIcon">🎁</div>
 
-          <h2 id="surpriseGiftTitle">🎁 Birthday Surprise Gift</h2>
+        <h2 id="giftTitle">Surprise Gift</h2>
+        <p id="giftMessage">Your surprise will appear here...</p>
 
-          <!-- Image Container with Fallback Placeholder -->
-          <div class="surprise-image-container">
-            <img
-              src="assets/gift.jpeg"
-              alt="Birthday Surprise"
-              id="surpriseGiftImg"
-              class="surprise-img"
-              onerror="
+        <button id="nextGift" class="gift-next" type="button">
+          🎉 Next Surprise
+        </button>
+      </div>
+    </div>
+
+    <!-- SECOND GIFT POPUP MODAL (Birthday Surprise Gift) -->
+    <div class="gift-modal surprise-gift-modal" id="surpriseGiftModal" role="dialog" aria-hidden="true"
+      aria-labelledby="surpriseGiftTitle">
+      <div class="gift-popup surprise-gift-popup">
+        <!-- Floating sparkles for aesthetic atmosphere -->
+        <span class="modal-sparkle s1" aria-hidden="true">✨</span>
+        <span class="modal-sparkle s2" aria-hidden="true">💖</span>
+        <span class="modal-sparkle s3" aria-hidden="true">⭐</span>
+        <span class="modal-sparkle s4" aria-hidden="true">✨</span>
+
+        <button id="closeSurpriseGift" class="gift-close" type="button" aria-label="Close surprise gift popup">
+          ✖
+        </button>
+
+        <h2 id="surpriseGiftTitle">🎁 Birthday Surprise Gift</h2>
+
+        <!-- Image Container with Fallback Placeholder -->
+        <div class="surprise-image-container">
+          <img src="assets/gift.jpeg" alt="Birthday Surprise" id="surpriseGiftImg" class="surprise-img" onerror="
                 if (this.src.includes('assets/image/suprise-img.jpeg')) {
                   this.src = 'image/suprise-img.jpeg';
                 } else {
                   this.style.display = 'none';
                   this.nextElementSibling.style.display = 'flex';
                 }
-              "
-            />
-            <div
-              class="surprise-img-placeholder"
-              id="surpriseGiftFallback"
-              style="display: none"
-            >
-              <div class="placeholder-icon">🖼️</div>
-              <div class="placeholder-text">Your Image Here</div>
-            </div>
+              " />
+          <div class="surprise-img-placeholder" id="surpriseGiftFallback" style="display: none">
+            <div class="placeholder-icon">🖼️</div>
+            <div class="placeholder-text">Your Image Here</div>
           </div>
-
-          <!-- Paragraph Message -->
-          <p class="surprise-gift-text">
-            Every memory with you is priceless.<br />
-            This little surprise is just a small way to say thank you for being
-            such an amazing person.<br />
-            Wishing you endless happiness, success, love and smiles. <br />
-
-            <span id="gift-color"
-              >Bahut sare gift dena baki hai tumko. <br />
-              maine jod ke rakkha hai, bs sahi samay ka intzar hai.
-            </span>
-            <br />
-            <span id="gift-color-2">Happy Birthday ❤️ </span>
-          </p>
         </div>
+
+        <!-- Paragraph Message -->
+        <p class="surprise-gift-text">
+          Every memory with you is priceless.<br />
+          This little surprise is just a small way to say thank you for being
+          such an amazing person.<br />
+          Wishing you endless happiness, success, love and smiles. <br />
+
+          <span id="gift-color">Bahut sare gift dena baki hai tumko. <br />
+            maine jod ke rakkha hai, bs sahi samay ka intzar hai.
+          </span>
+          <br />
+          <span id="gift-color-2">Happy Birthday ❤️ </span>
+        </p>
       </div>
-      <!-- ===========================================
+    </div>
+    <!-- ===========================================
                   MYSTERY GIFT END
       =========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   BIRTHDAY MINI GAMES START
       =========================================== -->
-      <section class="games-section" id="games">
-        <div class="games-bg"></div>
+    <section class="games-section" id="games">
+      <div class="games-bg"></div>
 
-        <div class="games-container">
-          <!-- Heading -->
-          <div class="games-heading">
-            <span class="games-tag">🎮 Birthday Arcade</span>
-            <h2>Let's Play Some Birthday Games 🎉</h2>
-            <p>Complete all mini games and unlock a secret birthday reward!</p>
+      <div class="games-container">
+        <!-- Heading -->
+        <div class="games-heading">
+          <span class="games-tag">🎮 Birthday Arcade</span>
+          <h2>Let's Play Some Birthday Games 🎉</h2>
+          <p>Complete all mini games and unlock a secret birthday reward!</p>
+        </div>
+
+        <!-- Main Score Board -->
+        <div class="game-score-board">
+          <div class="score-card">
+            <h3 id="gameScore">0</h3>
+            <span>Top Score</span>
           </div>
 
-          <!-- Main Score Board -->
-          <div class="game-score-board">
-            <div class="score-card">
-              <h3 id="gameScore">0</h3>
-              <span>Top Score</span>
-            </div>
-
-            <div class="score-card">
-              <h3 id="gameTimer">60</h3>
-              <span>Seconds</span>
-            </div>
-
-            <div class="score-card">
-              <h3 id="gameLevel">1</h3>
-              <span>Level</span>
-            </div>
+          <div class="score-card">
+            <h3 id="gameTimer">60</h3>
+            <span>Seconds</span>
           </div>
 
-          <!-- Games Selection Grid -->
-          <div class="games-grid">
-            <!-- Game 1 -->
-            <div class="game-card">
-              <div class="game-icon">🎂</div>
-              <h3>Catch The Cake</h3>
-              <p>
-                Catch as many birthday cakes as possible before time runs out.
-              </p>
-              <button class="game-btn" data-game="cake" type="button">
-                ▶ Start Game
-              </button>
-            </div>
-
-            <!-- Game 2 -->
-            <div class="game-card">
-              <div class="game-icon">🎈</div>
-              <h3>Pop The Balloons</h3>
-              <p>Pop colorful balloons and earn bonus points.</p>
-              <button class="game-btn" data-game="balloon" type="button">
-                ▶ Start Game
-              </button>
-            </div>
-
-            <!-- Game 3 -->
-            <div class="game-card">
-              <div class="game-icon">❤️</div>
-              <h3>Heart Collector</h3>
-              <p>Collect hearts before they disappear.</p>
-              <button class="game-btn" data-game="heart" type="button">
-                ▶ Start Game
-              </button>
-            </div>
+          <div class="score-card">
+            <h3 id="gameLevel">1</h3>
+            <span>Level</span>
           </div>
         </div>
-      </section>
 
-      <!-- GAME POPUP MODAL -->
-      <div
-        class="game-modal"
-        id="gameModal"
-        role="dialog"
-        aria-hidden="true"
-        aria-labelledby="gameTitle"
-      >
-        <div class="game-popup">
-          <button
-            id="closeGame"
-            class="game-close"
-            type="button"
-            aria-label="Close game modal"
-          >
-            ✖
-          </button>
-
-          <h2 id="gameTitle">Birthday Game</h2>
-          <p id="gameInstruction">Catch everything and score maximum points!</p>
-
-          <!-- Play Area -->
-          <div class="game-area" id="gameArea"></div>
-
-          <!-- Live Score & Timer Footer -->
-          <div class="game-footer">
-            <span> Score: <strong id="liveScore">0</strong> </span>
-            <span> Time: <strong id="liveTime">60</strong> </span>
+        <!-- Games Selection Grid -->
+        <div class="games-grid">
+          <!-- Game 1 -->
+          <div class="game-card">
+            <div class="game-icon">🎂</div>
+            <h3>Catch The Cake</h3>
+            <p>
+              Catch as many birthday cakes as possible before time runs out.
+            </p>
+            <button class="game-btn" data-game="cake" type="button">
+              ▶ Start Game
+            </button>
           </div>
+
+          <!-- Game 2 -->
+          <div class="game-card">
+            <div class="game-icon">🎈</div>
+            <h3>Pop The Balloons</h3>
+            <p>Pop colorful balloons and earn bonus points.</p>
+            <button class="game-btn" data-game="balloon" type="button">
+              ▶ Start Game
+            </button>
+          </div>
+
+          <!-- Game 3 -->
+          <div class="game-card">
+            <div class="game-icon">❤️</div>
+            <h3>Heart Collector</h3>
+            <p>Collect hearts before they disappear.</p>
+            <button class="game-btn" data-game="heart" type="button">
+              ▶ Start Game
+            </button>
+          </div>
+        </div>
+
+        <!-- Page Navigation Controls -->
+        <div class="page-nav-controls">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="gift">
+            ⬅ Previous: Gift Box
+          </button>
+          <button type="button" class="page-nav-btn next-page-btn" data-target="credits">
+            Next: Wishes ❤️ ➡
+          </button>
         </div>
       </div>
-      <!-- ===========================================
+    </section>
+
+    <!-- GAME POPUP MODAL -->
+    <div class="game-modal" id="gameModal" role="dialog" aria-hidden="true" aria-labelledby="gameTitle">
+      <div class="game-popup">
+        <button id="closeGame" class="game-close" type="button" aria-label="Close game modal">
+          ✖
+        </button>
+
+        <h2 id="gameTitle">Birthday Game</h2>
+        <p id="gameInstruction">Catch everything and score maximum points!</p>
+
+        <!-- Play Area -->
+        <div class="game-area" id="gameArea"></div>
+
+        <!-- Live Score & Timer Footer -->
+        <div class="game-footer">
+          <span> Score: <strong id="liveScore">0</strong> </span>
+          <span> Time: <strong id="liveTime">60</strong> </span>
+        </div>
+      </div>
+    </div>
+    <!-- ===========================================
                   MINI GAMES END
       =========================================== -->
 
-      <!-- ===========================================
+    <!-- ===========================================
                   CREDITS & FOOTER START
       =========================================== -->
-      <section class="credits-section" id="credits">
-        <div class="credits-bg"></div>
+    <section class="credits-section" id="credits">
+      <div class="credits-bg"></div>
 
-        <div class="credits-container">
-          <div class="credits-top">
-            <span class="credits-tag">❤️ Credits & Thank You</span>
-            <h2 class="credits-title">Thank You For Being Here 🎉</h2>
-            <p class="credits-subtitle">
-              A little love, a lot of memories, and one big smile—just for you.
-            </p>
-          </div>
-
-          <div class="credits-grid">
-            <div class="credit-card" data-animate="fade">
-              <div class="credit-line">💖 A Little Message</div>
-              <p class="credit-text">
-                Thank you for being such an amazing friend. Your kindness,
-                laughter, and beautiful heart make every moment brighter. I hope
-                this little surprise brings a smile to your face, just like you
-                always bring one to mine.
-              </p>
-            </div>
-
-            <div class="credit-card" data-animate="fade">
-              <div class="credit-line">👨‍💻 Made with ❤️ by Shivank</div>
-              <p class="credit-text">
-                Every animation, every color, every line of code, and every
-                little detail was created with care to make your birthday feel
-                extra special. I hope this surprise becomes one of your favorite
-                memories.
-              </p>
-            </div>
-
-            <div class="credit-card" data-animate="fade">
-              <div class="credit-line">🎉 One Last Birthday Wish</div>
-              <p class="credit-text">
-                No matter where life takes you, always remember how special and
-                appreciated you are. May every dream you wish for come true, and
-                may happiness always find its way to you. Happy Birthday once
-                again! 💖🎂
-              </p>
-            </div>
-
-            <!-- NEW MESSAGE CARD ABOVE EXISTING MOTIVATIONAL QUOTE -->
-            <div class="dil-ki-baat-card" data-animate="fade">
-              <!-- Floating Decorative Elements -->
-              <span class="quote-floating-heart qfh1" aria-hidden="true"
-                >💖</span
-              >
-              <span class="quote-floating-heart qfh2" aria-hidden="true"
-                >❤️</span
-              >
-              <span class="quote-floating-star qfs1" aria-hidden="true"
-                >✨</span
-              >
-              <span class="quote-floating-star qfs2" aria-hidden="true"
-                >⭐</span
-              >
-
-              <!-- Badge -->
-              <div class="dil-badge">✨ Mere Dil Ki Ek Baat</div>
-
-              <!-- Message Content (Paragraphs) -->
-              <div class="dil-message-content">
-                <p>
-                  <span class="text-highlight"
-                    >Tumhara mann jo chahe, wo karo.</span
-                  >
-                  Padhai karo, Singing karo, Dancing karo, Sports khelo, ghumo,
-                  tahlo ya zindagi ko apne tareeke se jiyo.
-                </p>
-                <p>
-                  Sahi ho ya galat, achha ho ya bura—main hamesha tumhare saath
-                  khada rahunga.
-                  <span class="text-highlight"
-                    >Zindagi mein chahe kuch bhi ho jaye, chahe kitni bhi
-                    mushkilein kyun na aayein, main tumhara saath kabhi nahi
-                    chhodunga.</span
-                  >
-                </p>
-                <p>
-                  Tumhe jab bhi meri zarurat hogi, main hamesha tumhare saath
-                  khada milunga. Tumhare har faisle mein, har khushi mein, har
-                  pareshani mein aur har mushkil waqt mein.
-                </p>
-                <p>
-                  Tum jo banna chaho bano, jo karna chaho karo aur jis raaste
-                  par chalna chaho chalo.
-                  <span class="text-highlight"
-                    >Main tumhe kabhi rokunga nahi</span
-                  >, kyunki main chahta hoon ki tum apni zindagi apne mann se
-                  jiyo aur wo sab karo jo tumhe khushi deta hai.
-                </p>
-                <p>
-                  Aur ek baat hamesha yaad rakhna—<span class="text-highlight"
-                    >main kahin bhi rahun ya tum kahin bhi raho, jab bhi tumhe
-                    meri zarurat padegi, tum mujhe apne paas hi paogi.</span
-                  >
-                </p>
-                <p>
-                  Chahe waqt kaisa bhi ho, haalat kaise bhi hon, main tumhare
-                  saath khada rehne ke liye hamesha taiyaar rahunga. Tumhari
-                  khushi mein khush, tumhare dukh mein tumhare saath aur har
-                  mushkil mein tumhara sahaara bankar.
-                </p>
-                <p>
-                  <span class="text-highlight"
-                    >Bas itna yaad rakhna ki tum kabhi akeli nahi ho.</span
-                  >
-                  <span class="text-highlight"
-                    >Main hamesha tumhare saath rahunga—tumhari parchhai bankar.
-                    ❤️</span
-                  >
-                </p>
-              </div>
-            </div>
-
-            <div class="credit-quote" data-animate="fade">
-              <div class="quote-tag">✨ Motivational Quote</div>
-              <h3 class="quote-text">
-                “Keep going. You’re closer than you think.”
-              </h3>
-              <p class="quote-sub">— For your next chapter of wins & smiles.</p>
-            </div>
-          </div>
-
-          <div class="credits-goodbye" data-animate="fade">
-            <span class="goodbye-heart">💖</span>
-            <h3 class="goodbye-title">🎉 Until We Meet Again</h3>
-            <p class="goodbye-text">
-              Thank you for taking this little birthday journey with me. I hope
-              every surprise, every memory, and every smile made your special
-              day even more beautiful. Keep smiling, keep shining, and may all
-              your dreams come true. Happy Birthday once again! 💖🎂
-            </p>
-          </div>
-
-          <div class="credits-actions">
-            <button
-              class="credits-btn credits-btn-primary"
-              id="backToTop"
-              type="button"
-            >
-              ⬆ Back To Top
-            </button>
-            <button
-              class="credits-btn credits-btn-secondary"
-              id="restartJourney"
-              type="button"
-            >
-              🔄 Restart Journey
-            </button>
-          </div>
-
-          <!-- Floating Hearts -->
-          <span class="credits-floating-heart cfh1" aria-hidden="true">💖</span>
-          <span class="credits-floating-heart cfh2" aria-hidden="true">❤️</span>
-          <span class="credits-floating-heart cfh3" aria-hidden="true">💕</span>
-          <span class="credits-floating-heart cfh4" aria-hidden="true">💗</span>
+      <div class="credits-container">
+        <div class="credits-top">
+          <span class="credits-tag">❤️ Credits & Thank You</span>
+          <h2 class="credits-title">Thank You For Being Here 🎉</h2>
+          <p class="credits-subtitle">
+            A little love, a lot of memories, and one big smile—just for you.
+          </p>
         </div>
-      </section>
-      <!-- ===========================================
+
+        <div class="credits-grid">
+          <div class="credit-card" data-animate="fade">
+            <div class="credit-line">💖 A Little Message</div>
+            <p class="credit-text">
+              Thank you for being such an amazing friend. Your kindness,
+              laughter, and beautiful heart make every moment brighter. I hope
+              this little surprise brings a smile to your face, just like you
+              always bring one to mine.
+            </p>
+          </div>
+
+          <div class="credit-card" data-animate="fade">
+            <div class="credit-line">👨‍💻 Made with ❤️ by Shivank</div>
+            <p class="credit-text">
+              Every animation, every color, every line of code, and every
+              little detail was created with care to make your birthday feel
+              extra special. I hope this surprise becomes one of your favorite
+              memories.
+            </p>
+          </div>
+
+          <div class="credit-card" data-animate="fade">
+            <div class="credit-line">🎉 One Last Birthday Wish</div>
+            <p class="credit-text">
+              No matter where life takes you, always remember how special and
+              appreciated you are. May every dream you wish for come true, and
+              may happiness always find its way to you. Happy Birthday once
+              again! 💖🎂
+            </p>
+          </div>
+
+          <!-- NEW MESSAGE CARD ABOVE EXISTING MOTIVATIONAL QUOTE -->
+          <div class="dil-ki-baat-card" data-animate="fade">
+            <!-- Floating Decorative Elements -->
+            <span class="quote-floating-heart qfh1" aria-hidden="true">💖</span>
+            <span class="quote-floating-heart qfh2" aria-hidden="true">❤️</span>
+            <span class="quote-floating-star qfs1" aria-hidden="true">✨</span>
+            <span class="quote-floating-star qfs2" aria-hidden="true">⭐</span>
+
+            <!-- Badge -->
+            <div class="dil-badge">✨ Mere Dil Ki Ek Baat</div>
+
+            <!-- Message Content (Paragraphs) -->
+            <div class="dil-message-content">
+              <p>
+                <span class="text-highlight">Tumhara mann jo chahe, wo karo.</span>
+                Padhai karo, Singing karo, Dancing karo, Sports khelo, ghumo,
+                tahlo ya zindagi ko apne tareeke se jiyo.
+              </p>
+              <p>
+                Sahi ho ya galat, achha ho ya bura—main hamesha tumhare saath
+                khada rahunga.
+                <span class="text-highlight">Zindagi mein chahe kuch bhi ho jaye, chahe kitni bhi
+                  mushkilein kyun na aayein, main tumhara saath kabhi nahi
+                  chhodunga.</span>
+              </p>
+              <p>
+                Tumhe jab bhi meri zarurat hogi, main hamesha tumhare saath
+                khada milunga. Tumhare har faisle mein, har khushi mein, har
+                pareshani mein aur har mushkil waqt mein.
+              </p>
+              <p>
+                Tum jo banna chaho bano, jo karna chaho karo aur jis raaste
+                par chalna chaho chalo.
+                <span class="text-highlight">Main tumhe kabhi rokunga nahi</span>, kyunki main chahta hoon ki tum apni
+                zindagi apne mann se
+                jiyo aur wo sab karo jo tumhe khushi deta hai.
+              </p>
+              <p>
+                Aur ek baat hamesha yaad rakhna—<span class="text-highlight">main kahin bhi rahun ya tum kahin bhi raho,
+                  jab bhi tumhe
+                  meri zarurat padegi, tum mujhe apne paas hi paogi.</span>
+              </p>
+              <p>
+                Chahe waqt kaisa bhi ho, haalat kaise bhi hon, main tumhare
+                saath khada rehne ke liye hamesha taiyaar rahunga. Tumhari
+                khushi mein khush, tumhare dukh mein tumhare saath aur har
+                mushkil mein tumhara sahaara bankar.
+              </p>
+              <p>
+                <span class="text-highlight">Bas itna yaad rakhna ki tum kabhi akeli nahi ho.</span>
+                <span class="text-highlight">Main hamesha tumhare saath rahunga—tumhari parchhai bankar.
+                  ❤️</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="credit-quote" data-animate="fade">
+            <div class="quote-tag">✨ Motivational Quote</div>
+            <h3 class="quote-text">
+              “Keep going. You’re closer than you think.”
+            </h3>
+            <p class="quote-sub">— For your next chapter of wins & smiles.</p>
+          </div>
+        </div>
+
+        <div class="credits-goodbye" data-animate="fade">
+          <span class="goodbye-heart">💖</span>
+          <h3 class="goodbye-title">🎉 Until We Meet Again</h3>
+          <p class="goodbye-text">
+            Thank you for taking this little birthday journey with me. I hope
+            every surprise, every memory, and every smile made your special
+            day even more beautiful. Keep smiling, keep shining, and may all
+            your dreams come true. Happy Birthday once again! 💖🎂
+          </p>
+        </div>
+
+        <div class="credits-actions">
+          <button class="credits-btn credits-btn-primary" id="backToTop" type="button">
+            ⬆ Back To Top
+          </button>
+          <button class="credits-btn credits-btn-secondary" id="restartJourney" type="button">
+            🔄 Restart Journey
+          </button>
+        </div>
+
+        <!-- Page Navigation Controls -->
+        <div class="page-nav-controls">
+          <button type="button" class="page-nav-btn prev-page-btn" data-target="games">
+            ⬅ Previous: Arcade
+          </button>
+          <button type="button" class="page-nav-btn next-page-btn" data-target="home">
+            Home 🎂 ➡
+          </button>
+        </div>
+
+        <!-- Floating Hearts -->
+        <span class="credits-floating-heart cfh1" aria-hidden="true">💖</span>
+        <span class="credits-floating-heart cfh2" aria-hidden="true">❤️</span>
+        <span class="credits-floating-heart cfh3" aria-hidden="true">💕</span>
+        <span class="credits-floating-heart cfh4" aria-hidden="true">💗</span>
+      </div>
+    </section>
+    <!-- ===========================================
                   CREDITS & FOOTER END
       =========================================== -->
-    </main>
+  </main>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    <script src="styele.js"></script>
-  </body>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="styele.js"></script>
+</body>
+
 </html>
